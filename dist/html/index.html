@@ -1,0 +1,98 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>21Cake蛋糕官网</title><link rel="stylesheet" href="../css/reset.css"><link rel="stylesheet" href="../iconfont/iconfont.css"><link rel="stylesheet" href="../css/index.css"><link rel="stylesheet" href="../css/headfooter.css"><script src="../javascript/startMove.js"></script><script src="../javascript/index.js"></script><script>window.onload = function(){
+        var ocity = document.getElementById("city");
+        var ocitylist = document.getElementById("citylist");
+            // //移入移出效果
+            ocity.onmouseenter = function(){
+                ocitylist.style.display = "block";
+            }
+            ocity.onmouseleave = function(){
+                ocitylist.style.display = "none";
+            }
+            // carousel(node);
+
+          const obanner = document.querySelector(".banner");
+          const oul = document.querySelector(".banner .imgBox");
+          const abtns = document.querySelectorAll(".banner .pointBox li");
+          const leftandrightbtn = document.querySelectorAll(".leftRightTabs a");
+        
+          let inow = 1;
+          let timer = null;
+          let isRunning = false;
+          //一开始就要调用一次
+          timerInner();
+  
+          //点击按钮小圆点切换轮播切换
+          for(var i = 0; i < abtns.length; i++){
+           abtns[i].index = i;
+           abtns[i].onclick = function(){
+               inow = this.index + 1;
+               tab();
+            };
+          }
+          // 自动轮播
+          function timerInner(){
+              timer = setInterval(function(){
+                  inow++;
+                  tab();
+              }, 3000);
+          }
+          //实现轮播效果
+          function tab() {
+             console.log(inow);
+            for (var i = 0; i < abtns.length; i++) {
+              abtns[i].className = "";
+            }
+            if (inow == abtns.length + 1) {
+              abtns[0].className = "active";
+            } else if(inow == 0){
+                abtns[abtns.length - 1].className = "active";
+            }else{
+              abtns[inow - 1].className = "active";
+  
+            }
+  
+            //开始动画
+            isRunning = true;
+            startMove(oul, { left: inow * -1423 },
+             function () {
+              //判断最后一张图片结束的时候
+              if (inow == abtns.length + 1) {
+                inow = 1;
+                oul.style.left = "-1423px";
+               
+  
+                //判断第一张图片的时候
+              }else if(inow == 0){
+                  inow = 5;
+                  oul.style.left = inow * -1423 + 'px';
+              }
+              //结束
+              isRunning = false;
+            });
+            
+          }
+  
+          //banner 添加鼠标的移入和移出
+          obanner.onmouseenter = function(){
+              clearInterval(timer);
+          };
+          obanner.onmouseleave = function(){
+              //重启动画
+              timerInner();
+          };
+
+          leftandrightbtn[0].onclick = function(){
+              if(!isRunning){
+                  inow--;
+                  tab();
+              }
+              return false;
+          }
+          leftandrightbtn[1].onclick = function(){
+              if(!isRunning){
+                  inow++;
+                  tab();
+              }
+              return false;
+          }
+        };</script></head><body><!-- headerbox --><div class="headerbox"><header><div class="headernav"><a class="logo" href="../html/index.html"><img src="../images/logo.png" alt="logo"></a><ul class="navbox"><li><a href="../html/index.html">首页</a></li><li><a href="../html/list.html">蛋糕</a></li><li><a href="">面包</a></li><li><a href="">冰激凌</a></li><li><a href="">咖啡下午茶</a></li><li><a href="">全国送</a></li><li><a href="">企业专区</a></li></ul><div class="navright"><a href="" class="app" id="app">app下载<dl class="applist" id="applist"><dt><img src="../images/app.png" alt="下载app"></dt><dd>下载享更多优惠</dd></dl></a><div class="city" id="city">上海 <i></i><ul id="citylist"><li><a href="">北京</a></li><li><a href="">天津</a></li><li><a href="">杭州</a></li><li><a href="">无锡</a></li><li><a href="">苏州</a></li><li><a href="">广州</a></li><li><a href="">深圳</a></li></ul></div><a href="" class="message" id="message">消息<dl class="messagelist" id="messagelist"><dd>通知</dd><dd>物流</dd></dl></a><span class="login"><a href="../html/login.html">登录</a> / <a href="../html/register.html">注册</a> </span><a href="../html/cart.html" class="cart"><i></i></a></div></div></header></div><!-- banner --><div class="banner"><ul class="imgBox clearFix"><li><a href="" style="background-image: url(../images/banner_1.jpg);"></a></li><li><a href="" style="background-image: url(../images/banner_2.jpg);"></a></li><li><a href="" style="background-image: url(../images/banner_3.jpg);"></a></li><li><a href="" style="background-image: url(../images/banner_4.jpg);"></a></li><li><a href="" style="background-image: url(../images/banner_5.jpg);"></a></li><li><a href="" style="background-image: url(../images/banner_1.jpg);"></a></li><li><a href="" style="background-image: url(../images/banner_2.jpg);"></a></li></ul><ol class="pointBox"><li class="active"></li><li></li><li></li><li></li><li></li></ol><div class="leftRightTabs"><a href="#" class="left"><i class="iconfont">&#xe617;</i></a> <a href="#" class="right"><i class="iconfont">&#xe612;</i></a></div></div><!-- content --><div id="contentbox"><div class="content"><div class="five"><a href=""><img src="../images/f1.jpg" alt=""></a><a href=""><img src="../images/f2.jpg" alt=""></a><a href=""><img src="../images/f3.jpg" alt=""></a><a href=""><img src="../images/f4.jpg" alt=""></a><a href=""><img src="../images/f5.png" alt=""></a></div><div class="new"><h4>新品 <span>/</span> <span>专区</span></h4><div><img src="../images/new.jpg" alt=""></div><div class="newfour"><ul><li><a href=""><img src="../images/new_1.png" alt=""> </a><a href=""><h6>蔓生</h6></a><a href=""><p>树莓奶油与浆果慕斯蛋糕</p></a><div><a href="">新品 ></a></div><div><span>¥198.00/454g(1.0磅)</span> <a href="">加入购物车</a></div></li><li><a href=""><img src="../images/new2.png" alt=""> </a><a href=""><h6>豆酪</h6></a><a href=""><p>树莓奶油与浆果慕斯蛋糕</p></a><div><a href="">儿童 ></a> <a href="">新品 ></a></div><div><span>¥198.00/454g(1.0磅)</span> <a href="">加入购物车</a></div></li><li><a href=""><img src="../images/new3.png" alt=""> </a><a href=""><h6>「新」杰瑞</h6></a><a href=""><p>树莓奶油与浆果慕斯蛋糕</p></a><div><a href="">儿童 ></a> <a href="">聚会 ></a> <a href="">新品 ></a></div><div><span>¥198.00/454g(1.0磅)</span> <a href="">加入购物车</a></div></li><li><a href=""><img src="../images/new4.png" alt=""> </a><a href=""><h6>松仁淡奶（木糖醇）</h6></a><a href=""><p>树莓奶油与浆果慕斯蛋糕</p></a><div><a href="">长辈 ></a> <a href="">新品 ></a></div><div><span>¥198.00/454g(1.0磅)</span> <a href="">加入购物车</a></div></li></ul></div></div><div class="brithday"><h4>生日 <span>/</span> <span>专区</span></h4><div><img src="../images/bri.jpg" alt=""></div><div class="newfour"><ul><li><a href=""><img src="../images/bri_1.png" alt=""> </a><a href=""><h6>蔓生</h6></a><a href=""><p>树莓奶油与浆果慕斯蛋糕</p></a><div><a href="">情侣 ></a> <a href="">含酒 ></a> <a href="">人气 ></a></div><div><span>¥198.00/454g(1.0磅)</span> <a href="">加入购物车</a></div></li><li><a href=""><img src="../images/bri2.png" alt=""> </a><a href=""><h6>蔓生</h6></a><a href=""><p>树莓奶油与浆果慕斯蛋糕</p></a><div><a href="">人气 ></a> <a href="">生日 ></a></div><div><span>¥198.00/454g(1.0磅)</span> <a href="">加入购物车</a></div></li><li><a href=""><img src="../images/bri3.png" alt=""> </a><a href=""><h6>蔓生</h6></a><a href=""><p>树莓奶油与浆果慕斯蛋糕</p></a><div><a href="">设计师款 ></a> <a href="">新品 ></a></div><div><span>¥198.00/454g(1.0磅)</span> <a href="">加入购物车</a></div></li><li><a href=""><img src="../images/bri4.png" alt=""> </a><a href=""><h6>蔓生</h6></a><a href=""><p>树莓奶油与浆果慕斯蛋糕</p></a><div><a href="">新品 ></a> <a href="">生日 ></a></div><div><span>¥198.00/454g(1.0磅)</span> <a href="">加入购物车</a></div></li></ul></div></div><div class="child"><h4>儿童 <span>/</span> <span>专区</span></h4><div><img src="../images/child.jpg" alt=""></div><div class="newfour"><ul><li><a href=""><img src="../images/child_1.png" alt=""> </a><a href=""><h6>蔓生</h6></a><a href=""><p>树莓奶油与浆果慕斯蛋糕</p></a><div><a href="">儿童 ></a> <a href="">新品 ></a> <a href="">相识 ></a></div><div><span>¥198.00/454g(1.0磅)</span> <a href="">加入购物车</a></div></li><li><a href=""><img src="../images/child2.png" alt=""> </a><a href=""><h6>蔓生</h6></a><a href=""><p>树莓奶油与浆果慕斯蛋糕</p></a><div><a href="">儿童 ></a> <a href="">生日 ></a> <a href="">人气 ></a></div><div><span>¥198.00/454g(1.0磅)</span> <a href="">加入购物车</a></div></li><li><a href=""><img src="../images/child3.png" alt=""> </a><a href=""><h6>蔓生</h6></a><a href=""><p>树莓奶油与浆果慕斯蛋糕</p></a><div><a href="">情侣 ></a> <a href="">儿童 ></a> <a href="">聚会 ></a> <a href="">人气 ></a></div><div><span>¥198.00/454g(1.0磅)</span> <a href="">加入购物车</a></div></li><li><a href=""><img src="../images/child4.png" alt=""> </a><a href=""><h6>蔓生</h6></a><a href=""><p>树莓奶油与浆果慕斯蛋糕</p></a><div><a href="">情侣 ></a> <a href="">低温 ></a> <a href="">聚会 ></a> <a href="">儿童 ></a></div><div><span>¥198.00/454g(1.0磅)</span> <a href="">加入购物车</a></div></li></ul></div></div><div class="party"><h4>聚会 <span>/</span> <span>专区</span></h4><div><img src="../images/party.jpg" alt=""></div><div class="newfour"><ul><li><a href=""><img src="../images/party_1.png" alt=""> </a><a href=""><h6>蔓生</h6></a><a href=""><p>树莓奶油与浆果慕斯蛋糕</p></a><div><a href="">含酒 ></a> <a href="">聚会 ></a> <a href="">生日 ></a> <a href="">人气 ></a></div><div><span>¥198.00/454g(1.0磅)</span> <a href="">加入购物车</a></div></li><li><a href=""><img src="../images/party2.jpeg" alt=""> </a><a href=""><h6>蔓生</h6></a><a href=""><p>树莓奶油与浆果慕斯蛋糕</p></a><div><a href="">儿童 ></a> <a href="">新品 ></a></div><div><span>¥198.00/454g(1.0磅)</span> <a href="">加入购物车</a></div></li><li><a href=""><img src="../images/party3.png" alt=""> </a><a href=""><h6>蔓生</h6></a><a href=""><p>树莓奶油与浆果慕斯蛋糕</p></a><div><a href="">含酒 ></a> <a href="">情侣 ></a> <a href="">生日 ></a></div><div><span>¥198.00/454g(1.0磅)</span> <a href="">加入购物车</a></div></li><li><a href=""><img src="../images/party4.png" alt=""> </a><a href=""><h6>蔓生</h6></a><a href=""><p>树莓奶油与浆果慕斯蛋糕</p></a><div><a href="">情侣 ></a> <a href="">生日 ></a></div><div><span>¥198.00/454g(1.0磅)</span> <a href="">加入购物车</a></div></li></ul></div></div><div class="event"><h4>活动门 <span>/</span> <span>是被吸引了吧</span></h4><ul><li><a href=""><img src="../images/event.jpg" alt=""></a></li></ul></div><div class="cake"><div><h4>廿一客 <span>/</span> <span>文章</span></h4><a href="">查看更多 ></a></div><ul class="caketwo"><li><a href=""><img src="../images/cake_1.jpg" alt=""><h5>冬季刊·进博会</h5><p>阅读全文 >></p></a></li><li><a href=""><img src="../images/cake_2.jpg" alt=""><h5>冬季刊·进博会</h5><p>阅读全文 >></p></a></li></ul></div></div></div><!-- footer --><div class="footer"><div class="foottop"><ul class="fone"><img src="../images/foot_2.png" alt=""> <img src="../images/foot_1.png" alt=""> <a href=""><img src="../images/weibo.png" alt=""></a><li><a href="" class="wx"><img src="../images/weixin.png" alt=""><div class="wxopen"><img src="../images/weixin_open.png" alt=""></div></a></li><li><a href="" class="tapp"><img src="../images/littleapp.png" alt=""><div class="appopen"><img src="../images/app_open.png" alt=""></div></a></li></ul><ul class="ftwo"><h6>关于我们</h6><span>联系我们</span><p class="footer_gray">订购专线：400 650 2121 （服务时间 08:00–22:00）；<br>企业团购热线：021-37768380；<br>客服电话：021-23099721（全国）；<br>kefu@21cake.com（邮箱）；</p><li><a href="">订购帮助</a> <a href="">企业合作</a> <a href="">生产经营资质</a> <a href="">公告专区</a></li></ul><ul class="fthree"><h6>关于我们</h6><p>杭州/广州：提前5小时预订；<br>北京：提前6小时预订；<br>上海：提前5.5-6小时预订；<br>天津/苏州/无锡/深圳：提前8小时预订（部分偏远地区除外，当日22点以后订单，于次日8点开始审核）</p><p>当日蛋糕配送截止下单时间：北京/上海：16:30；杭州/广州：14:00；天津：10:30；苏州/无锡/深圳：11:00</p></ul><ul class="ffour"><h6>关于我们</h6><p>网站注册公司名称: 北京廿一客食品有限公司 地址: 北京市北京经济技术开发区兴海二街5号院3号楼<br>网站运营：廿一客（上海）电子商务有限公司 地址：上海市松江区新效支路518号<br>上海廿一客食品有限公司分公司 地址：上海市松江区新效支路518号<br>杭州廿一客食品有限公司 地址：杭州市滨江区秋溢路500号<br>广州廿一客食品有限公司 地址：广州市南沙区东涌镇鱼窝头大道段<br>北京廿一客食品有限公司 地址：北京市北京经济技术开发区兴海二街5号院<br>深圳廿一客贸易有限公司 地址：深圳市福田区星河世纪大厦A栋1717<br>天津廿一客食品有限公司 地址：天津市河西区麦收大厦2-2004<br>广州廿一客食品贸易有限公司 地址：广州市南沙区东涌镇鱼窝头大道段<br>举实（上海）食品有限公司 地址：上海市松江区新效支路518号<br></p></ul></div><div class="footbottom">Copyright© 21Cake蛋糕官网商城 2007-2020, 版权所有 京ICP备14006254号-1 京公网安备 11030102010682号</div></div></body></html>

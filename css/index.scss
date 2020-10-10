@@ -1,0 +1,288 @@
+// set content block
+@mixin content-block-one{
+    h4{
+        font-size: 26px;
+        color: #724228;
+        margin-bottom: 28px;
+        span{
+            font-size: 14px;
+            color: #8E5D43;
+        }
+    }
+    .newfour{
+        ul{
+            li{
+                margin:8px;
+                float: left;
+                a:nth-of-type(1){
+                    img{
+                        width: 263px;
+                        height: 230px;
+                        background-size: auto 100%;
+                        display: block;
+                        margin: auto;
+                        border-radius: 10px;
+                        background: #fafafa;
+                    }
+                }
+                a:nth-of-type(2){
+                    h6{
+                        margin-top: 10px;
+                        font-size: 16px;
+                        color:#000;
+                    }
+                }
+                a:nth-of-type(3){
+                    p{
+                        line-height: 24px;
+                        font-size: 14px;
+                        color:#616161;
+                    }
+                }
+                div:nth-of-type(1){
+                    a{
+                        padding: 1px 6px 1px 8px;
+                        font-size: 12px;
+                        color: #D5BFA7;
+                        border:1px solid #D5BFA7;
+                        display: inline-block;
+                        border-radius: 100px;
+                    }
+                }
+                div:nth-of-type(2){
+                    margin-top: 15px;
+                    border-top: 1px dashed #d5c0a8;
+                    height: 54px;
+                    line-height: 54px;
+                    span{
+                        float: left;
+                        font-size: 14px;
+                        color:#BB9772;
+                    }
+                    a{
+                        height: 20px;
+                        line-height: 20px;
+                        margin-top: 17px;
+                        padding: 0 10px;
+                        display:block;
+                        float: right;
+                        font-size: 12px;
+                        color:#fff;
+                        background-color: #643E28;
+                    }
+                }
+            }
+            li:nth-of-type(1){
+                margin-left: 0;
+            }
+            li:nth-of-type(4){
+                margin-right: 0;
+            }
+        }
+    }
+}
+/* banner */
+.clearFix::after, .clearFix::before{
+    content: '';
+    display: block;
+    clear: both;
+}
+.banner{
+    width: 1423px;
+    height: 480px;
+    margin:0 auto;
+    position: relative;
+    overflow: hidden;
+    .leftRightTabs{
+        a{
+            .iconfont{
+                font-size: 30px;
+            }
+        }
+        
+    }
+}
+.banner > ul{
+    width:700%;
+    height: 100%;
+    background:tomato;
+    position: absolute;
+    top:0;
+    left:-1423px;
+   
+}
+.banner > ul >li{
+    width: 1423px;
+    height: 100%;
+    float: left;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+    font-size: 90px;
+    a{
+        display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    }
+}
+.banner > ol{
+    height: 20px;
+    position: absolute;
+    border-radius: 10px;
+    bottom:20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.banner > ol > li{
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor:pointer;
+    margin-left:5px;
+    margin-right: 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 1px 0px;
+}
+.banner > ol > li.active{
+    background-color: #442818;
+}
+.banner > div{
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    left:0;
+    top:50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.banner > div > a{
+    width: 20px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:rgba(0, 0, 0, 0.4);
+    color:#fff;
+}
+/* contentbox */
+#contentbox{
+    .content{
+        width: 1100px;
+        margin:0 auto;
+        .five{
+            margin:26px auto 50px;
+            overflow: hidden;
+            a{
+                display: block;
+                float: left;
+                width: 200px;
+                height: 100px;
+                margin: 6px 10px;
+                box-shadow: 0 3px 9px 0 rgba(189, 187, 187, 0.5);
+            }
+        }
+        .new{
+            @include content-block-one();
+        }
+        .brithday{
+            @include content-block-one();
+        }
+        .child{
+            @include content-block-one();
+        }
+        .party{
+            @include content-block-one();
+        }
+        .event{
+            h4{
+                font-size: 26px;
+                color: #724228;
+                margin-top: 8px;
+                margin-bottom: 28px;
+                span{
+                    font-size: 14px;
+                    color: #8E5D43;
+                }
+            }
+            ul{
+                li{
+                    margin-bottom: 60px;
+                    box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.1);
+                    border-radius: 10px;
+                    background-color: #fff;
+                    overflow: hidden;
+                    width: 542px;
+                    a{
+                        img{
+                            width: 542px;
+                        }
+                    }
+                }
+            }
+        }
+        .cake{
+            margin-bottom: 95px;
+            overflow: hidden;
+            div{
+                overflow: hidden;
+                h4{
+                    font-size: 26px;
+                    color: #724228;
+                    margin-top: 8px;
+                    margin-bottom: 28px;
+                    float: left;
+                    span{
+                        font-size: 14px;
+                        color: #8E5D43;
+                        
+                    }
+                }
+                a{
+                    float: right;
+                    font-size: 12px;
+                    color: #8e5d43;
+                }
+            }
+        }
+        .caketwo{
+            overflow: hidden;
+            height: 350px;
+            li{
+                float: left;
+                background-color: #fff;
+                width: 542px;
+                height: 345px;
+                overflow: hidden;
+                border-radius: 8px;
+                box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.1);
+                a{
+                    img{
+                        width:542px;
+                        height: 252px;
+                    }
+                    h5{
+                        color:#000;
+                        font-size: 22px;
+                        margin:22px 0 22px 17px;
+                    }
+                    p{
+                        color:#ad814b;
+                        font-size:12px;
+                        margin:22px 0 30px 17px;
+                    }
+                }
+            }
+            li:nth-of-type(2){
+                margin-left: 16px;
+            }
+        }
+    }  
+}

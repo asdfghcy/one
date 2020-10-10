@@ -1,0 +1,65 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "741980",
+      "name": "择律-选择费用-倒三角形-反对",
+      "font_class": "zelvxuanzefeiyongdaosanjiaoxingfandui",
+      "unicode": "e665",
+      "unicode_decimal": 58981
+    },
+    {
+      "icon_id": "978354",
+      "name": "微信",
+      "font_class": "gongzhonghao",
+      "unicode": "e63e",
+      "unicode_decimal": 58942
+    },
+    {
+      "icon_id": "1172663",
+      "name": "在线客服",
+      "font_class": "zaixiankefu",
+      "unicode": "e62b",
+      "unicode_decimal": 58923
+    },
+    {
+      "icon_id": "1638197",
+      "name": "购物车",
+      "font_class": "gouwuche",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    },
+    {
+      "icon_id": "4638876",
+      "name": "app应用",
+      "font_class": "apps",
+      "unicode": "e888",
+      "unicode_decimal": 59528
+    },
+    {
+      "icon_id": "6240886",
+      "name": "手机",
+      "font_class": "shouji",
+      "unicode": "e6ba",
+      "unicode_decimal": 59066
+    },
+    {
+      "icon_id": "9402934",
+      "name": "尖括号",
+      "font_class": "changyongicon-",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
+      "icon_id": "9402968",
+      "name": "尖括号-左",
+      "font_class": "changyongicon-1",
+      "unicode": "e617",
+      "unicode_decimal": 58903
+    }
+  ]
+}

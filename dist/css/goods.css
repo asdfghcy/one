@@ -1,0 +1,235 @@
+.contentbox {
+  margin-top: 10px;
+  color: #684029; }
+  .contentbox .content {
+    width: 1050px;
+    margin: 0 auto;
+    overflow: hidden; }
+    .contentbox .content .left {
+      float: left; }
+      .contentbox .content .left div {
+        display: none; }
+        .contentbox .content .left div img {
+          width: 924px;
+          height: 520px; }
+      .contentbox .content .left #big {
+        width: 360px;
+        height: 400px;
+        position: absolute;
+        left: 700px;
+        top: 100px;
+        display: none;
+        overflow: hidden; }
+      .contentbox .content .left #big img {
+        width: 720px;
+        height: 1280px;
+        position: absolute;
+        left: 0;
+        top: 0; }
+    .contentbox .content .right {
+      float: right;
+      width: 90px;
+      position: relative;
+      height: 520px; }
+      .contentbox .content .right #small {
+        width: 90px;
+        height: 160px; }
+        .contentbox .content .right #small img {
+          width: 100%; }
+        .contentbox .content .right #small #mark {
+          width: 45px;
+          height: 45px;
+          background: rgba(0, 0, 0, 0.3);
+          position: absolute;
+          left: 0;
+          top: 0; }
+      .contentbox .content .right ul {
+        width: 90px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        max-height: 280px;
+        overflow: hidden; }
+        .contentbox .content .right ul .active {
+          border: 1px solid #C69C6D;
+          height: 48px;
+          width: 88px; }
+        .contentbox .content .right ul li {
+          margin-top: 20px;
+          width: 90px;
+          height: 50x; }
+          .contentbox .content .right ul li img {
+            width: 100%; }
+  .contentbox .message {
+    width: 1050px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding-bottom: 10px;
+    border-bottom: #D8D8D8 solid 1px; }
+    .contentbox .message .meleft {
+      float: left;
+      width: 484px; }
+      .contentbox .message .meleft h2 {
+        padding: 20px 0 17px 0;
+        font-size: 20px;
+        line-height: 28px; }
+      .contentbox .message .meleft div:nth-of-type(1) {
+        margin: 20px 0 14px; }
+        .contentbox .message .meleft div:nth-of-type(1) a {
+          padding: 1px 6px 1px 8px;
+          font-size: 12px;
+          color: #D5BFA7;
+          border: 1px solid #D5BFA7;
+          display: inline-block;
+          border-radius: 100px; }
+      .contentbox .message .meleft .ul1 {
+        margin-bottom: 14px;
+        overflow: hidden; }
+        .contentbox .message .meleft .ul1 li {
+          float: left; }
+          .contentbox .message .meleft .ul1 li img {
+            width: 50px;
+            height: 50px; }
+          .contentbox .message .meleft .ul1 li span {
+            display: inline-block;
+            height: 20px;
+            line-height: 20px;
+            color: #684029;
+            font-size: 12px; }
+      .contentbox .message .meleft p {
+        font-size: 12px;
+        width: 484px;
+        line-height: 2em;
+        min-height: 30px; }
+      .contentbox .message .meleft .ul2 li {
+        height: 34px;
+        line-height: 34px; }
+      .contentbox .message .meleft .ul2 li:nth-of-type(1) i {
+        background-position: -118px -2px;
+        height: 20px;
+        width: 19px;
+        display: inline-block;
+        vertical-align: middle;
+        background-image: url(../images/icon.png);
+        background-repeat: no-repeat;
+        background-size: 240px auto;
+        margin: 0 10px; }
+      .contentbox .message .meleft .ul2 li:nth-of-type(1) span {
+        font-size: 12px; }
+      .contentbox .message .meleft .ul2 li:nth-of-type(2) i {
+        background: url(../images/tang.png) no-repeat center;
+        background-size: 22px auto;
+        width: 20px;
+        margin-right: 2px;
+        display: inline-block;
+        vertical-align: middle;
+        height: 20px;
+        margin-left: 10px; }
+      .contentbox .message .meleft .ul2 li:nth-of-type(2) i:nth-of-type(4) {
+        background: url(../images/tang2.png) no-repeat center; }
+      .contentbox .message .meleft .ul2 li:nth-of-type(2) i:nth-of-type(5) {
+        background: url(../images/tang2.png) no-repeat center; }
+      .contentbox .message .meleft .ul2 li:nth-of-type(2) span {
+        font-size: 12px; }
+      .contentbox .message .meleft .ul2 li:nth-of-type(2) .fivetang {
+        line-height: 34px; }
+        .contentbox .message .meleft .ul2 li:nth-of-type(2) .fivetang i {
+          height: 20px;
+          width: 20px; }
+    .contentbox .message .meright {
+      float: right;
+      width: 500px; }
+      .contentbox .message .meright h3 {
+        height: 25px;
+        line-height: 25px;
+        font-size: 18px;
+        z-index: 10;
+        top: 165px;
+        left: 335px;
+        color: #C69C6D;
+        padding: 20px 0 10px; }
+        .contentbox .message .meright h3 span {
+          font-size: 26px; }
+      .contentbox .message .meright .four {
+        overflow: hidden;
+        margin-bottom: 20px; }
+        .contentbox .message .meright .four ul {
+          font-size: 12px; }
+          .contentbox .message .meright .four ul li {
+            display: inline-block;
+            height: 25px;
+            line-height: 25px;
+            margin: 5px 0;
+            padding-right: 10px; }
+            .contentbox .message .meright .four ul li i {
+              display: inline-block;
+              width: 25px;
+              height: 25px;
+              vertical-align: middle;
+              background-image: url(../images/icon.png);
+              background-size: 310px 120px;
+              background-repeat: no-repeat;
+              background-position: -210px -5px; }
+      .contentbox .message .meright dl {
+        overflow: hidden; }
+        .contentbox .message .meright dl dt {
+          float: left;
+          width: 50px;
+          line-height: 30px;
+          font-size: 12px; }
+        .contentbox .message .meright dl dd {
+          float: left;
+          line-height: 30px; }
+          .contentbox .message .meright dl dd ul {
+            overflow: hidden; }
+            .contentbox .message .meright dl dd ul li {
+              float: left;
+              font-size: 12px;
+              min-width: 100px;
+              height: 30px;
+              margin-left: 15px;
+              text-align: center;
+              color: #7A5844;
+              margin-bottom: 25px;
+              cursor: pointer; }
+              .contentbox .message .meright dl dd ul li a {
+                display: block;
+                color: #684029;
+                height: 28px;
+                border: 1px solid #e7e0dd;
+                position: relative;
+                padding: 0 5px; }
+                .contentbox .message .meright dl dd ul li a:hover {
+                  border: 1px solid #C69C6D; }
+      .contentbox .message .meright .buttwo {
+        margin-bottom: 20px;
+        width: 344px;
+        height: 40px;
+        font-size: 13px; }
+        .contentbox .message .meright .buttwo button {
+          font-size: 13px;
+          width: 167px;
+          height: 30px;
+          line-height: 30px;
+          border: none;
+          background: #684029;
+          color: #fff; }
+          .contentbox .message .meright .buttwo button:hover {
+            background: #482618; }
+        .contentbox .message .meright .buttwo button:nth-of-type(1) {
+          margin-right: 6px;
+          background: #F4F4F4;
+          color: #7A5844; }
+          .contentbox .message .meright .buttwo button:nth-of-type(1):hover {
+            background: #efefef; }
+      .contentbox .message .meright .gs ul li {
+        min-width: 60px; }
+  .contentbox .bott {
+    height: auto;
+    background-color: coral;
+    width: 1050px;
+    margin: 0 auto; }
+    .contentbox .bott img {
+      text-align: left;
+      display: block;
+      max-width: 100%; }

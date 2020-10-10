@@ -1,0 +1,166 @@
+.headerbox {
+  height: 80px; }
+  .headerbox header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    height: 80px;
+    background: #fff;
+    box-shadow: 0 2px 2px 0 rgba(189, 187, 187, 0.5); }
+    .headerbox header .headernav {
+      height: 80px;
+      line-height: 80px;
+      margin: 0 auto;
+      max-width: 1200px;
+      min-width: 760px; }
+      .headerbox header .headernav .logo {
+        float: left; }
+        .headerbox header .headernav .logo img {
+          width: 120px;
+          height: 44px; }
+      .headerbox header .headernav .navbox {
+        float: left;
+        margin-left: 30px; }
+        .headerbox header .headernav .navbox li {
+          float: left; }
+          .headerbox header .headernav .navbox li a {
+            display: block;
+            margin: 0 15px;
+            font-size: 14px;
+            color: #684029; }
+            .headerbox header .headernav .navbox li a:hover {
+              color: #bb9772; }
+      .headerbox header .headernav .navright {
+        position: relative;
+        float: right;
+        color: #684029;
+        font-size: 14px; }
+        .headerbox header .headernav .navright .app {
+          transition: 3s;
+          float: left;
+          margin-right: 20px;
+          color: #684029; }
+          .headerbox header .headernav .navright .app:hover {
+            color: #bb9772; }
+        .headerbox header .headernav .navright .city {
+          width: 80px;
+          text-align: center;
+          color: #684029;
+          float: left; }
+          .headerbox header .headernav .navright .city i {
+            background: url(../images/icon.png) no-repeat;
+            background-position: 0 -59px;
+            background-size: 310px 120px;
+            height: 7px;
+            width: 10px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 4px; }
+          .headerbox header .headernav .navright .city #citylist {
+            position: absolute;
+            top: 65px;
+            text-align: center;
+            padding: 12px 0;
+            background: #fff;
+            border: 1px solid #EDEDED;
+            box-shadow: 0px 2px 4px 0px #ededed;
+            display: none;
+            width: 90px; }
+            .headerbox header .headernav .navright .city #citylist li a {
+              display: block;
+              font-size: 12px;
+              color: #D5BFA7;
+              line-height: 18px;
+              margin: 6px 0; }
+              .headerbox header .headernav .navright .city #citylist li a:hover {
+                color: #001; }
+        .headerbox header .headernav .navright .message {
+          display: inline-block;
+          float: left;
+          padding-bottom: 25px;
+          padding-top: 25px;
+          line-height: 32px;
+          font-size: 14px;
+          position: relative;
+          width: 50px;
+          text-align: center;
+          color: #684029; }
+          .headerbox header .headernav .navright .message:hover {
+            color: #bb9772; }
+          .headerbox header .headernav .navright .message #messagelist {
+            position: absolute;
+            top: 65px;
+            text-align: center;
+            padding: 12px 0;
+            background: #fff;
+            border: 1px solid #EDEDED;
+            box-shadow: 0px 2px 4px 0px #ededed;
+            display: none;
+            width: 90px; }
+            .headerbox header .headernav .navright .message #messagelist dd {
+              display: block;
+              font-size: 12px;
+              color: #D5BFA7;
+              line-height: 18px;
+              margin: 6px 0; }
+              .headerbox header .headernav .navright .message #messagelist dd:hover {
+                color: #001; }
+        .headerbox header .headernav .navright .login {
+          float: left;
+          width: 80px;
+          text-align: center; }
+          .headerbox header .headernav .navright .login a {
+            color: #684029; }
+            .headerbox header .headernav .navright .login a:hover {
+              color: #bb9772; }
+        .headerbox header .headernav .navright .cart {
+          float: left;
+          height: 32px;
+          padding-top: 22px;
+          padding-bottom: 20px;
+          position: relative;
+          padding-right: 6px;
+          padding-left: 15px; }
+          .headerbox header .headernav .navright .cart i {
+            background: url(../images/icon.png) no-repeat;
+            float: left;
+            background-position: -286px -76px;
+            background-size: 310px 120px;
+            height: 18px;
+            width: 18px;
+            margin-top: 9px; }
+        .headerbox header .headernav .navright .applist {
+          display: none;
+          opacity: 0;
+          filter: alpha(opacity=0);
+          height: 114px;
+          border: 1px solid #ededed;
+          position: absolute;
+          top: 65px;
+          padding: 10px;
+          left: -34px;
+          background-color: #fff;
+          box-shadow: 0px 2px 4px 0px;
+          border: 1px solid #EDEDED;
+          text-align: center; }
+          .headerbox header .headernav .navright .applist dt img {
+            width: 100px;
+            height: 100px; }
+          .headerbox header .headernav .navright .applist dd {
+            margin-top: 5px;
+            font-size: 12px;
+            color: #684029;
+            height: 16px;
+            line-height: 16px; }
+
+#app:hover #applist {
+  display: block;
+  opacity: 1;
+  filter: alpha(opacity=100); }
+
+#message:hover #messagelist {
+  display: block;
+  opacity: 1;
+  filter: alpha(opacity=100); }
